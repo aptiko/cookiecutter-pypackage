@@ -10,7 +10,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
    usage
    modules
    {% if cookiecutter.create_author_file == 'y' -%}authors
-   {% endif -%}history
+   {% endif -%}Release history <changes>
 
 Indices and tables
 ==================
