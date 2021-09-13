@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-
-"""The setup script."""
+import os
+import re
 
 from setuptools import setup, find_packages
 
@@ -10,6 +10,13 @@ with open('README.rst') as readme_file:
 requirements = [{%- if cookiecutter.command_line_interface|lower == 'click' %}'Click>=7.0',{%- endif %} ]
 
 test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest>=3',{%- endif %} ]
+
+
+def get_version():
+    scriptdir = os.path.dirname(os.path.abspath(__file__))
+    init_py_path = os.path.join(scriptdir, "{{ cookiecutter.project_slug }}", "__init__.py")
+    with open(init_py_path) as f:
+        return re.search(r'^__version__ = "(.*?)"$', f.read(), re.MULTILINE).group(1)
 
 {%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',
@@ -55,6 +62,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
-    version='{{ cookiecutter.version }}',
+    version=get_version(),
     zip_safe=False,
 )
