@@ -156,11 +156,6 @@ def test_bake_without_author_file(cookies):
         doc_files = [f.basename for f in result.project.join('docs').listdir()]
         assert 'authors.rst' not in doc_files
 
-        # Assert there are no spaces in the toc tree
-        docs_index_path = result.project.join('docs/index.rst')
-        with open(str(docs_index_path)) as index_file:
-            assert 'contributing\n   history' in index_file.read()
-
         # Check that
         manifest_path = result.project.join('MANIFEST.in')
         with open(str(manifest_path)) as manifest_file:
