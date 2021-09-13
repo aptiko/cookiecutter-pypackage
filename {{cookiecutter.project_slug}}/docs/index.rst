@@ -5,9 +5,8 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   installation
-   usage
-   modules
+   quick-start
+   api
    {% if cookiecutter.create_author_file == 'y' -%}authors
    {% endif -%}Release history <changes>
 
