@@ -1,8 +1,8 @@
-Welcome to {{ cookiecutter.project_name }}'s documentation!
-======================================
+{{ cookiecutter.project_name }} documentation
+=============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    quick-start
