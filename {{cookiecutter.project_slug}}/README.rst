@@ -10,6 +10,9 @@
 .. image:: https://img.shields.io/travis/com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
         :target: https://app.travis-ci.com/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
+.. image:: https://img.shields.io/codecov/c/gh/{{ cookiecutter.github_username }}{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
+        :target: https://app.codecovio/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
